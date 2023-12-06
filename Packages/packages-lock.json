@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.radioactivegoat.events": {
-      "version": "file:com.radioactivegoat.events",
+      "version": "file:com.radioactivagoat.events",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}
