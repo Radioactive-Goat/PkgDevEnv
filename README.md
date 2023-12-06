@@ -7,8 +7,8 @@ This is the project that needs to be used to develop the generic packages that a
 ## Package Status
 | Display Name | Package Name | Status |
 |--------------|--------------|--------|
-|RGS.Events|com.radioactivegoat.events|Integrated|
-|RGS.Tweening|com.radioactivegoat.tweening|Pending|
-|RGS.DialogueSystem|com.radioactivegoat.dialoguesystem|Pending|
-|RGS.InventorySystem|com.radioactivegoat.inventorysystem|Pending|
-|RGS.CommonEditorTools|com.radioactivegoat.cet|Pending|
+|RG.Events|com.radioactivegoat.events|Integrated|
+|RG.Tweening|com.radioactivegoat.tweening|Pending|
+|RG.DialogueSystem|com.radioactivegoat.dialoguesystem|Pending|
+|RG.InventorySystem|com.radioactivegoat.inventorysystem|Pending|
+|RG.CommonEditorTools|com.radioactivegoat.cet|Pending|
