@@ -3,4 +3,6 @@
 	url = https://github.com/Radioactive-Goat/RG.Events.git
 [submodule "Packages/com.radioactivegoat.dialoguesystem"]
 	path = Packages/com.radioactivegoat.dialoguesystem
-	url = git@github.com:Radioactive-Goat/RG.DialogueSystem.git
+	url = https://github.com/Radioactive-Goat/RG.DialogueSystem.git
+[submodule "Packages/com.radioactivegoat.tweening"]
+	url = https://github.com/Radioactive-Goat/RG.Tweening.git
