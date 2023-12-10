@@ -1,13 +1,13 @@
 {
   "dependencies": {
-    "com.radioactivegoat.events": {
-      "version": "file:com.radioactivagoat.events",
+    "com.radioactivegoat.dialoguesystem": {
+      "version": "file:com.radioactivegoat.dialoguesystem",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}
     },
-    "com.radioactivegoat.tweening": {
-      "version": "file:com.radioactivagoat.tweening",
+    "com.radioactivegoat.events": {
+      "version": "file:com.radioactivegoat.events",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}

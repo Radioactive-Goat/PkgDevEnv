@@ -1,3 +1,6 @@
 [submodule "Packages/com.radioactivegoat.events"]
 	path = Packages/com.radioactivegoat.events
 	url = https://github.com/Radioactive-Goat/RG.Events.git
+[submodule "Packages/com.radioactivegoat.dialoguesystem"]
+	path = Packages/com.radioactivegoat.dialoguesystem
+	url = git@github.com:Radioactive-Goat/RG.DialogueSystem.git
