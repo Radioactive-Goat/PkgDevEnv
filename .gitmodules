@@ -5,4 +5,5 @@
 	path = Packages/com.radioactivegoat.dialoguesystem
 	url = https://github.com/Radioactive-Goat/RG.DialogueSystem.git
 [submodule "Packages/com.radioactivegoat.tweening"]
+	path = Packages/com.radioactivegoat.tweening
 	url = https://github.com/Radioactive-Goat/RG.Tweening.git
