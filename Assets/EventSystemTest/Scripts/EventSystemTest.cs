@@ -8,7 +8,7 @@ public class EventSystemTest : MonoBehaviour
     public void RegAlpha()
     {
         EventSystem.Instance.Register<EventAlpha>();
-        EventSystem.Instance.GetEvent<EventAlpha>().AddCallback(EACB);
+        EventSystem.Instance.GetEvent<EventAlpha>().Subscribe(EACB);
     }
 
     private void EACB(AlphaArgs args)
@@ -24,7 +24,7 @@ public class EventSystemTest : MonoBehaviour
     public void RegBeta()
     {
         EventSystem.Instance.Register<EventBeta>();
-        EventSystem.Instance.GetEvent<EventBeta>().AddCallback((BetaArgs args) => { Debug.Log(args); });
+        EventSystem.Instance.GetEvent<EventBeta>().Subscribe((BetaArgs args) => { Debug.Log(args); });
     }
 
     public void InvokeBeta() 
