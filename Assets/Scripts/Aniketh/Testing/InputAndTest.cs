@@ -9,26 +9,27 @@ namespace RG.Testing
     {
         private enum BehaviorE { SpeedUpMultiply, SpeedUpValue, SkipToEnd }
         [SerializeField] private float _defaultTypingSpeed = 0.1f;
-        [SerializeField] private List<string> _dialogues;
+        [SerializeField] private DialogCollection _dialogueChain;
         [SerializeField] private BehaviorE _eBehavior;
         [SerializeField] private float _speedUpMultiplier, _speedUpValue;
 
         [SerializeField] private UiHandler _uiHandler;
 
-        private int _dialogueIndex;
-        private bool _dialogCompleted;
+        private bool _dialogChainTriggered;
 
         private void Start()
         {
             TypeWriter.Instance.UpdateTimeGapBetweenLetters(_defaultTypingSpeed);
             TypeWriter.Instance.OnTypingComplete += OnDialogueEnd;
-            _dialogCompleted = true;
-            _dialogueIndex = 0;
+
+            DialogFlowHandler.Instance.OnCollectionEnded += OnDialogueChainEnded;
         }
 
         private void OnDestroy()
         {
             TypeWriter.Instance.OnTypingComplete -= OnDialogueEnd;
+
+            DialogFlowHandler.Instance.OnCollectionEnded -= OnDialogueChainEnded;
         }
 
         private void Update()
@@ -40,15 +41,17 @@ namespace RG.Testing
 
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if(_dialogCompleted)
+                if(!TypeWriter.Instance.IsTyping)
                 {
-                    if (_dialogueIndex != _dialogues.Count)
+                    if(_dialogChainTriggered)
                     {
-                        TypeWriter.Instance.StartTypeWriter(_dialogues[_dialogueIndex]);
-                        _dialogCompleted = false;
+                        DialogFlowHandler.Instance.NextDialogue();
                     }
-                    if(_dialogueIndex < _dialogues.Count)
-                        _dialogueIndex++;
+                    else
+                    {
+                        DialogFlowHandler.Instance.StartNewDialogChain(_dialogueChain);
+                        _dialogChainTriggered = true;
+                    }
                 }
                 else if(_eBehavior == BehaviorE.SpeedUpMultiply)
                 {
@@ -66,7 +69,7 @@ namespace RG.Testing
 
             if(Input.GetKeyUp(KeyCode.E))
             {
-                if (!_dialogCompleted)
+                if (TypeWriter.Instance.IsTyping)
                 {
                     if (_eBehavior == BehaviorE.SpeedUpMultiply || _eBehavior == BehaviorE.SpeedUpValue)
                     {
@@ -78,8 +81,12 @@ namespace RG.Testing
 
         private void OnDialogueEnd()
         {
-            _dialogCompleted = true;
             TypeWriter.Instance.ReturnToDefaultSpeed();
+        }
+
+        private void OnDialogueChainEnded()
+        {
+            _dialogChainTriggered = false;
         }
     }
 }

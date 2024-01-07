@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d38183db769b1c4f8fdb2b7d87b159f, type: 3}
+  m_Name: TestDialoguCollection
+  m_EditorClassIdentifier: 
+  Dialogs:
+  - Charactor: 0
+    Dialogue: Hi I am Yulia!
+  - Charactor: 1
+    Dialogue: I am Troy.
+  - Charactor: 2
+    Dialogue: Well, I am the Owl...
+  - Charactor: 3
+    Dialogue: Wtf... anyways I am the Haunting Fly.
+  - Charactor: 2
+    Dialogue: Haunting fly and you were trying to judge my name.
+  - Charactor: 1
+    Dialogue: Is this your first day at work.
+  - Charactor: 0
+    Dialogue: Yes!
+  - Charactor: 2
+    Dialogue: No, I have been here for a year now.
+  - Charactor: 3
+    Dialogue: Me too.
+  - Charactor: 2
+    Dialogue: What! I have never seen you around.
+  - Charactor: 0
+    Dialogue: 'Is this place that big that you guys never met,
+
+      I thought his
+      was a small building.'
+  - Charactor: 1
+    Dialogue: Well, sqatch what was that sound....
+  - Charactor: 3
+    Dialogue: Just an regular explostion, don't think anyone died today, yet.
+  - Charactor: 2
+    Dialogue: Yup don' think so else the red lights would be all over the place.
+  - Charactor: 0
+    Dialogue: Lets go check it out Troy.
+  - Charactor: 1
+    Dialogue: Yes right behind you.

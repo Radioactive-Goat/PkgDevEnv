@@ -17,6 +17,9 @@ namespace RG.Testing
             TypeWriter.Instance.OnStartTyping += OnDialogueStarted;
             TypeWriter.Instance.OnTextUpdated += OnDialogueUpdated;
             TypeWriter.Instance.OnTypingComplete += OnDialogueCompleted;
+
+            DialogFlowHandler.Instance.OnCollectionEnded += CloseUI;
+            DialogFlowHandler.Instance.OnForceEnded += CloseUI;
         }
 
         private void OnDestroy()
@@ -24,6 +27,9 @@ namespace RG.Testing
             TypeWriter.Instance.OnStartTyping -= OnDialogueStarted;
             TypeWriter.Instance.OnTextUpdated -= OnDialogueUpdated;
             TypeWriter.Instance.OnTypingComplete -= OnDialogueCompleted;
+
+            DialogFlowHandler.Instance.OnCollectionEnded -= CloseUI;
+            DialogFlowHandler.Instance.OnForceEnded -= CloseUI;
         }
 
         private void OnDialogueStarted()
@@ -45,6 +51,8 @@ namespace RG.Testing
         {
             if (!_dialogSystemPanel.activeSelf)
             {
+                CharactorDisplayHandler.Instance.ResetCharactorDisplays();
+                _dialogueText?.SetText("");
                 _dialogSystemPanel.SetActive(true);
             }
         }
