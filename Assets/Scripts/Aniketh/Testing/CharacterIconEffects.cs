@@ -17,14 +17,14 @@ namespace RG.Testing
             _initialScale = transform.localScale;
             _listnerScale = transform.localScale / 2;
 
-            _iconHandler.OnActiveListner += OnBecomeListner;
-            _iconHandler.OnActiveSpeaker += OnBecomeSpeaker;
+            _iconHandler.OnActiveListner.AddListener(OnBecomeListner);
+            _iconHandler.OnActiveSpeaker.AddListener(OnBecomeSpeaker);
         }
 
         private void OnDestroy()
         {
-            _iconHandler.OnActiveListner -= OnBecomeListner;
-            _iconHandler.OnActiveSpeaker -= OnBecomeSpeaker;
+            _iconHandler.OnActiveListner.RemoveListener(OnBecomeListner);
+            _iconHandler.OnActiveSpeaker.RemoveListener(OnBecomeSpeaker);
         }
 
         private void OnBecomeListner()

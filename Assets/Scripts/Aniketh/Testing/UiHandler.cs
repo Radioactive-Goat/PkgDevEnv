@@ -20,6 +20,8 @@ namespace RG.Testing
 
             DialogFlowHandler.Instance.OnCollectionEnded += CloseUI;
             DialogFlowHandler.Instance.OnForceEnded += CloseUI;
+
+            ResponseOptionsHandler.Instance.OnStartResponse += OnResponcesShown;
         }
 
         private void OnDestroy()
@@ -30,6 +32,8 @@ namespace RG.Testing
 
             DialogFlowHandler.Instance.OnCollectionEnded -= CloseUI;
             DialogFlowHandler.Instance.OnForceEnded -= CloseUI;
+
+            ResponseOptionsHandler.Instance.OnStartResponse -= OnResponcesShown;
         }
 
         private void OnDialogueStarted()
@@ -40,6 +44,11 @@ namespace RG.Testing
         private void OnDialogueUpdated(string newDialogueValue)
         {
             _dialogueText.SetText(newDialogueValue);
+        }
+
+        private void OnResponcesShown()
+        {
+            _dialogueText.SetText("");
         }
 
         private void OnDialogueCompleted()
