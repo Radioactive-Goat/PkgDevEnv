@@ -1865,6 +1865,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1617395383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1617395385}
+  - component: {fileID: 1617395384}
+  m_Layer: 0
+  m_Name: TestEventsScript
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1617395384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617395383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db37a93b81e835e4d830149f68bcf8f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1617395385
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617395383}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2109559147}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1622830677
 GameObject:
   m_ObjectHideFlags: 0
@@ -2195,6 +2239,191 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 653ac752a9345004b8c328bd11ab59f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2109559141
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2109559147}
+  - component: {fileID: 2109559146}
+  - component: {fileID: 2109559145}
+  - component: {fileID: 2109559144}
+  - component: {fileID: 2109559142}
+  - component: {fileID: 2109559143}
+  m_Layer: 0
+  m_Name: TestDialogEvents
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2109559142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109559141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf4b3cd6a3bd5a14dab2e42f3b8d74ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _responseCollection: {fileID: 11400000, guid: bc7640ecb5907e8459753daf532fd167, type: 2}
+  _connectEventTo: 01000000
+  <PlayOnBeforeEndedEvent>k__BackingField: 0
+  _responseEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1617395384}
+        m_TargetAssemblyTypeName: RG.Testing.TestDialogEvents, AnikTesting
+        m_MethodName: EventForClosingFromResponse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2109559143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109559141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70401eb2b46b78148a44a92dc700ff75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _connectEventTo: {fileID: 11400000, guid: 59e9560b1fbcbbd408c4d93947f6c05b, type: 2}
+  <PlayOnBeforeEndedEvent>k__BackingField: 0
+  _dialogEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1617395384}
+        m_TargetAssemblyTypeName: RG.Testing.TestDialogEvents, AnikTesting
+        m_MethodName: EventForClosingFromResponse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2109559144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109559141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf4b3cd6a3bd5a14dab2e42f3b8d74ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _responseCollection: {fileID: 11400000, guid: bc7640ecb5907e8459753daf532fd167, type: 2}
+  _connectEventTo: 0000000002000000
+  <PlayOnBeforeEndedEvent>k__BackingField: 0
+  _responseEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1617395384}
+        m_TargetAssemblyTypeName: RG.Testing.TestDialogEvents, AnikTesting
+        m_MethodName: SomethingEvent1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2109559145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109559141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf4b3cd6a3bd5a14dab2e42f3b8d74ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _responseCollection: {fileID: 11400000, guid: 7e7a00c01a5ab914a9c8b7ab521f02df, type: 2}
+  _connectEventTo: 01000000
+  <PlayOnBeforeEndedEvent>k__BackingField: 0
+  _responseEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1617395384}
+        m_TargetAssemblyTypeName: RG.Testing.TestDialogEvents, AnikTesting
+        m_MethodName: SomethingEvent2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2109559146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109559141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70401eb2b46b78148a44a92dc700ff75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _connectEventTo: {fileID: 11400000, guid: b0ee2b4a504f10747b905d9ac12bfa07, type: 2}
+  <PlayOnBeforeEndedEvent>k__BackingField: 1
+  _dialogEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1617395384}
+        m_TargetAssemblyTypeName: RG.Testing.TestDialogEvents, AnikTesting
+        m_MethodName: MovingToResponse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!4 &2109559147
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109559141}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1617395385}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3157999094415361013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2302,3 +2531,4 @@ SceneRoots:
   - {fileID: 493857194}
   - {fileID: 1807275192}
   - {fileID: 1407980822}
+  - {fileID: 2109559147}
