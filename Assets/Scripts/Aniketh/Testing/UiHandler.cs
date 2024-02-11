@@ -14,26 +14,26 @@ namespace RG.Testing
 
         void Start()
         {
-            TypeWriter.Instance.OnStartTyping += OnDialogueStarted;
-            TypeWriter.Instance.OnTextUpdated += OnDialogueUpdated;
-            TypeWriter.Instance.OnTypingComplete += OnDialogueCompleted;
+            DialogueSystemRefs.Instance.TypeWriter.OnStartTyping += OnDialogueStarted;
+            DialogueSystemRefs.Instance.TypeWriter.OnTextUpdated += OnDialogueUpdated;
+            DialogueSystemRefs.Instance.TypeWriter.OnTypingComplete += OnDialogueCompleted;
 
-            DialogFlowHandler.Instance.OnCollectionEnded += CloseUI;
-            DialogFlowHandler.Instance.OnForceEnded += CloseUI;
+            DialogueSystemRefs.Instance.DialogFlowHandler.OnCollectionEnded += CloseUI;
+            DialogueSystemRefs.Instance.DialogFlowHandler.OnForceEnded += CloseUI;
 
-            ResponseOptionsHandler.Instance.OnStartResponse += OnResponcesShown;
+            DialogueSystemRefs.Instance.ResponseOptionsHandler.OnStartResponse += OnResponcesShown;
         }
 
         private void OnDestroy()
         {
-            TypeWriter.Instance.OnStartTyping -= OnDialogueStarted;
-            TypeWriter.Instance.OnTextUpdated -= OnDialogueUpdated;
-            TypeWriter.Instance.OnTypingComplete -= OnDialogueCompleted;
+            DialogueSystemRefs.Instance.TypeWriter.OnStartTyping -= OnDialogueStarted;
+            DialogueSystemRefs.Instance.TypeWriter.OnTextUpdated -= OnDialogueUpdated;
+            DialogueSystemRefs.Instance.TypeWriter.OnTypingComplete -= OnDialogueCompleted;
 
-            DialogFlowHandler.Instance.OnCollectionEnded -= CloseUI;
-            DialogFlowHandler.Instance.OnForceEnded -= CloseUI;
+            DialogueSystemRefs.Instance.DialogFlowHandler.OnCollectionEnded -= CloseUI;
+            DialogueSystemRefs.Instance.DialogFlowHandler.OnForceEnded -= CloseUI;
 
-            ResponseOptionsHandler.Instance.OnStartResponse -= OnResponcesShown;
+            DialogueSystemRefs.Instance.ResponseOptionsHandler.OnStartResponse -= OnResponcesShown;
         }
 
         private void OnDialogueStarted()
@@ -60,7 +60,7 @@ namespace RG.Testing
         {
             if (!_dialogSystemPanel.activeSelf)
             {
-                CharactorDisplayHandler.Instance.ResetCharactorDisplays();
+                DialogueSystemRefs.Instance.CharactorDisplayHandler.ResetCharactorDisplays();
                 _dialogueText?.SetText("");
                 _dialogSystemPanel.SetActive(true);
             }

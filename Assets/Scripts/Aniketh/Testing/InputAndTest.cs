@@ -19,25 +19,27 @@ namespace RG.Testing
 
         private bool _dialogChainTriggered;
         private InputState _inputState;
+        private TypeWriter _typeWriter;
 
         private void Start()
         {
             _inputState = InputState.Conversation;
-            TypeWriter.Instance.UpdateTimeGapBetweenLetters(_defaultTypingSpeed);
-            TypeWriter.Instance.OnTypingComplete += OnDialogueEnd;
+            _typeWriter = DialogueSystemRefs.Instance.TypeWriter;
+            _typeWriter.UpdateTimeGapBetweenLetters(_defaultTypingSpeed);
+            _typeWriter.OnTypingComplete += OnDialogueEnd;
 
-            DialogFlowHandler.Instance.OnCollectionEnded += OnDialogueChainEnded;
-            ResponseOptionsHandler.Instance.OnStartResponse += OnResponseOptionsBegun;
-            ResponseOptionsHandler.Instance.OnEndResponse += OnResponseOptionsEnd;
+            DialogueSystemRefs.Instance.DialogFlowHandler.OnCollectionEnded += OnDialogueChainEnded;
+            DialogueSystemRefs.Instance.ResponseOptionsHandler.OnStartResponse += OnResponseOptionsBegun;
+            DialogueSystemRefs.Instance.ResponseOptionsHandler.OnEndResponse += OnResponseOptionsEnd;
         }
 
         private void OnDestroy()
         {
-            TypeWriter.Instance.OnTypingComplete -= OnDialogueEnd;
+            _typeWriter.OnTypingComplete -= OnDialogueEnd;
 
-            DialogFlowHandler.Instance.OnCollectionEnded -= OnDialogueChainEnded;
-            ResponseOptionsHandler.Instance.OnStartResponse -= OnResponseOptionsBegun;
-            ResponseOptionsHandler.Instance.OnEndResponse -= OnResponseOptionsEnd;
+            DialogueSystemRefs.Instance.DialogFlowHandler.OnCollectionEnded -= OnDialogueChainEnded;
+            DialogueSystemRefs.Instance.ResponseOptionsHandler.OnStartResponse -= OnResponseOptionsBegun;
+            DialogueSystemRefs.Instance.ResponseOptionsHandler.OnEndResponse -= OnResponseOptionsEnd;
         }
 
         private void Update()
@@ -59,17 +61,17 @@ namespace RG.Testing
 
         private void DialogConversationInputs()
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return))
             {
-                if (!TypeWriter.Instance.IsTyping)
+                if (!_typeWriter.IsTyping)
                 {
                     if (_dialogChainTriggered)
                     {
-                        DialogFlowHandler.Instance.NextDialogue();
+                        DialogueSystemRefs.Instance.DialogFlowHandler.NextDialogue();
                     }
                     else
                     {
-                        DialogFlowHandler.Instance.StartNewDialogChain(_dialogueChain);
+                        DialogueSystemRefs.Instance.DialogFlowHandler.StartNewDialogChain(_dialogueChain);
                         _dialogChainTriggered = true;
                     }
                 }
@@ -77,26 +79,26 @@ namespace RG.Testing
                 {
                     if (_eBehavior == BehaviorE.SpeedUpMultiply)
                     {
-                        TypeWriter.Instance.SpeedUpWithMultiplier(_speedUpMultiplier);
+                        _typeWriter.SpeedUpWithMultiplier(_speedUpMultiplier);
                     }
                     else if (_eBehavior == BehaviorE.SpeedUpValue)
                     {
-                        TypeWriter.Instance.SpeedUpWithSetValue(_speedUpValue);
+                        _typeWriter.SpeedUpWithSetValue(_speedUpValue);
                     }
                     else if (_eBehavior == BehaviorE.SkipToEnd)
                     {
-                        TypeWriter.Instance.SkipToEnd();
+                        _typeWriter.SkipToEnd();
                     }
                 }
             }
 
-            if (Input.GetKeyUp(KeyCode.E))
+            if (Input.GetKeyUp(KeyCode.E) || Input.GetKeyDown(KeyCode.Return))
             {
-                if (TypeWriter.Instance.IsTyping)
+                if (_typeWriter.IsTyping)
                 {
                     if (_eBehavior == BehaviorE.SpeedUpMultiply || _eBehavior == BehaviorE.SpeedUpValue)
                     {
-                        TypeWriter.Instance.ReturnToDefaultSpeed();
+                        _typeWriter.ReturnToDefaultSpeed();
                     }
                 }
             }
@@ -104,23 +106,23 @@ namespace RG.Testing
 
         private void DialogResponcesInputs()
         {
-            if(Input.GetKeyDown(KeyCode.S))
+            if(Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
             {
-                ResponseOptionsHandler.Instance?.NavigateDown();
+                DialogueSystemRefs.Instance.ResponseOptionsHandler?.NavigateDown();
             }
-            else if (Input.GetKeyDown(KeyCode.W))
+            else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
             {
-                ResponseOptionsHandler.Instance?.NavigateUp();
+                DialogueSystemRefs.Instance.ResponseOptionsHandler?.NavigateUp();
             }
-            else if (Input.GetKeyDown(KeyCode.E))
+            else if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return))
             {
-                ResponseOptionsHandler.Instance?.SelectResponse();
+                DialogueSystemRefs.Instance.ResponseOptionsHandler?.SelectResponse();
             }
         }
 
         private void OnDialogueEnd()
         {
-            TypeWriter.Instance.ReturnToDefaultSpeed();
+            _typeWriter.ReturnToDefaultSpeed();
         }
 
         private void OnDialogueChainEnded()
