@@ -7,3 +7,6 @@
 [submodule "Packages/com.radioactivegoat.tweening"]
 	path = Packages/com.radioactivegoat.tweening
 	url = https://github.com/Radioactive-Goat/RG.Tweening.git
+[submodule "Packages/com.radioactivegoat.buildsystem"]
+	path = Packages/com.radioactivegoat.buildsystem
+	url = https://github.com/Radioactive-Goat/RG.BuildSystem.git

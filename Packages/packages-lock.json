@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.radioactivegoat.build-system": {
+      "version": "file:com.radioactivegoat.buildsystem",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.radioactivegoat.dialoguesystem": {
       "version": "file:com.radioactivegoat.dialoguesystem",
       "depth": 0,
@@ -18,6 +24,12 @@
       "version": "file:com.radioactivegoat.tweening",
       "depth": 0,
       "source": "embedded",
+      "dependencies": {}
+    },
+    "com.unity.2d.sprite": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
       "dependencies": {}
     },
     "com.unity.collab-proxy": {
