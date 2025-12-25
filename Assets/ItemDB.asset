@@ -1,0 +1,301 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8679456134874207042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b10135a102f92d48b777207b177b294, type: 3}
+  m_Name: D_sdd
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  id: 13
+  displayName: sdd
+  description: 
+  prefab: {fileID: 0}
+  isStackable: 0
+  maxStackSize: 0
+--- !u!114 &-8663362440551689851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b10135a102f92d48b777207b177b294, type: 3}
+  m_Name: 4_wda_
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  id: 4
+  displayName: 'wda '
+  description: 
+  prefab: {fileID: 0}
+  isStackable: 0
+  maxStackSize: 0
+--- !u!114 &-8097320236844603959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b10135a102f92d48b777207b177b294, type: 3}
+  m_Name: 3_awd
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  id: 3
+  displayName: awd
+  description: 
+  prefab: {fileID: 0}
+  isStackable: 0
+  maxStackSize: 0
+--- !u!114 &-7385486130507215841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b10135a102f92d48b777207b177b294, type: 3}
+  m_Name: C_d
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  id: 12
+  displayName: d
+  description: 
+  prefab: {fileID: 0}
+  isStackable: 0
+  maxStackSize: 0
+--- !u!114 &-5100678665403924706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b10135a102f92d48b777207b177b294, type: 3}
+  m_Name: B_asd
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  id: 11
+  displayName: asd
+  description: 
+  prefab: {fileID: 0}
+  isStackable: 0
+  maxStackSize: 0
+--- !u!114 &-4687185341648572629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b10135a102f92d48b777207b177b294, type: 3}
+  m_Name: 45_<NotSet>
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  id: 69
+  displayName: <NotSet>
+  description: 
+  prefab: {fileID: 0}
+  isStackable: 0
+  maxStackSize: 0
+--- !u!114 &-2577808152137350163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b10135a102f92d48b777207b177b294, type: 3}
+  m_Name: 7_s
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  id: 7
+  displayName: s
+  description: 
+  prefab: {fileID: 0}
+  isStackable: 0
+  maxStackSize: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67dcc349f2b6b3f4cb2410804ff5581e, type: 3}
+  m_Name: ItemDB
+  m_EditorClassIdentifier: Assembly-CSharp::ItemDataTable
+  _nextID: 71
+  _data:
+  - {fileID: 8731326953207970770}
+  - {fileID: -8097320236844603959}
+  - {fileID: -8663362440551689851}
+  - {fileID: 7592777094721038065}
+  - {fileID: 1309716717279294383}
+  - {fileID: -2577808152137350163}
+  - {fileID: 319837537809864508}
+  - {fileID: 3097759253373244602}
+  - {fileID: 8327560696354721142}
+  - {fileID: -5100678665403924706}
+  - {fileID: -7385486130507215841}
+  - {fileID: -8679456134874207042}
+  - {fileID: 3697613327765798816}
+  - {fileID: -4687185341648572629}
+  - {fileID: 5743512343538829828}
+--- !u!114 &319837537809864508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b10135a102f92d48b777207b177b294, type: 3}
+  m_Name: 8__da
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  id: 8
+  displayName: ' da'
+  description: 
+  prefab: {fileID: 0}
+  isStackable: 0
+  maxStackSize: 0
+--- !u!114 &1309716717279294383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b10135a102f92d48b777207b177b294, type: 3}
+  m_Name: 6_das
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  id: 6
+  displayName: das
+  description: 
+  prefab: {fileID: 0}
+  isStackable: 0
+  maxStackSize: 0
+--- !u!114 &3097759253373244602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b10135a102f92d48b777207b177b294, type: 3}
+  m_Name: 9_dsadas
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  id: 9
+  displayName: dsadas
+  description: 
+  prefab: {fileID: 0}
+  isStackable: 0
+  maxStackSize: 0
+--- !u!114 &3697613327765798816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b10135a102f92d48b777207b177b294, type: 3}
+  m_Name: 44_asdd
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  id: 68
+  displayName: asdd
+  description: 
+  prefab: {fileID: 0}
+  isStackable: 0
+  maxStackSize: 0
+--- !u!114 &5743512343538829828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b10135a102f92d48b777207b177b294, type: 3}
+  m_Name: 46_<NotSet>
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  id: 70
+  displayName: <NotSet>
+  description: 
+  prefab: {fileID: 0}
+  isStackable: 0
+  maxStackSize: 0
+--- !u!114 &7592777094721038065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b10135a102f92d48b777207b177b294, type: 3}
+  m_Name: 5__dawd
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  id: 5
+  displayName: ' dawd'
+  description: 
+  prefab: {fileID: 0}
+  isStackable: 0
+  maxStackSize: 0
+--- !u!114 &8327560696354721142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b10135a102f92d48b777207b177b294, type: 3}
+  m_Name: A_wdas
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  id: 10
+  displayName: wdas
+  description: 
+  prefab: {fileID: 0}
+  isStackable: 0
+  maxStackSize: 0
+--- !u!114 &8731326953207970770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b10135a102f92d48b777207b177b294, type: 3}
+  m_Name: 0_wdawd
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  id: 0
+  displayName: wdawd
+  description: 
+  prefab: {fileID: 0}
+  isStackable: 0
+  maxStackSize: 0
